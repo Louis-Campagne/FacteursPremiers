@@ -8,4 +8,9 @@ public class FacteursPremiersTest {
     void test_generate_1_retourne_liste_vide() {
         Assertions.assertThat(FacteursPremiers.generate(1)).isEmpty();
     }
+
+    @Test
+    void test_generate_8_retourne_2_2_2() {
+        Assertions.assertThat(FacteursPremiers.generate(8)).containsExactly(2, 2, 2);
+    }
 }

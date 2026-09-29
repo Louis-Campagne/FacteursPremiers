@@ -7,8 +7,9 @@ import java.util.List;
 public class FacteursPremiers {
     public static List<Integer> generate(int n) {
         List<Integer> facteurs = new ArrayList<>();
-        if (n > 1) {
+        while (n % 2 == 0) {
             facteurs.add(2);
+            n /= 2;
         }
         return facteurs;
     }
