@@ -7,9 +7,14 @@ import java.util.List;
 public class FacteursPremiers {
     public static List<Integer> generate(int n) {
         List<Integer> facteurs = new ArrayList<>();
-        while (n % 2 == 0) {
-            facteurs.add(2);
-            n /= 2;
+        int diviseur = 2;
+
+        while (n > 1) {
+            while (n % diviseur == 0) {
+                facteurs.add(diviseur);
+                n /= diviseur;
+            }
+            diviseur++;
         }
         return facteurs;
     }

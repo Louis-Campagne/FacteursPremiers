@@ -13,4 +13,9 @@ public class FacteursPremiersTest {
     void test_generate_8_retourne_2_2_2() {
         Assertions.assertThat(FacteursPremiers.generate(8)).containsExactly(2, 2, 2);
     }
+
+    @Test
+    void test_generate_6_retourne_2_3() {
+        Assertions.assertThat(FacteursPremiers.generate(6)).containsExactly(2, 3);
+    }
 }
